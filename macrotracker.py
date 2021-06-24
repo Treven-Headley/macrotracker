@@ -166,6 +166,14 @@ class Library:
                 return food
         return None
 
+    def display_food_library(self):
+
+        food_library = []
+        for food in self.get_inventory():
+            food_library.append(food.get_title())
+        food_library.sort()
+        return food_library
+
     def get_person_from_name(self, person_name):
         """
         function that returns a member's information (object) if the id can be verified in the membership list
